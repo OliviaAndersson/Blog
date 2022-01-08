@@ -1,2 +1,124 @@
-
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat:wght@300&family=Spartan:wght@100&display=swap";
+body {
+  margin: 0;
+  position: relative;
+  background-color: #f8f4ec;
+  font-size: 12pt;
+  font-family: "Montserrat", sans-serif;
+}
+body header {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 4;
+  font-family: "Montserrat", sans-serif;
+}
+body header h1 {
+  font-family: "Spartan", sans-serif;
+}
+body header img {
+  max-height: 90%;
+}
+body header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 30%;
+  list-style: none;
+}
+body header ul a {
+  text-decoration: none;
+  color: black;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+}
+body header #log-in {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 10%;
+  text-align: center;
+}
+body header #log-in:hover {
+  background-color: black;
+  color: white;
+}
+#hero {
+  width: 100%;
+  height: 90vh;
+  background-image: url("hero.f4edd759.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+#hero #text-container {
+  width: 100%;
+  height: 70%;
+  margin: 0 auto;
+  text-align: center;
+  color: #000;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.8rem;
+  line-height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+#hero #text-container p {
+  overflow: hidden;
+  border-right: 0.15em solid green;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 4.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: green;
+  }
+}
+#hero #border {
+  width: 100%;
+  background-image: url("border.61f042b6.png");
+  position: absolute;
+  background-repeat: repeat-x;
+  height: 10px;
+  background-size: 75px 10px;
+  bottom: 0;
+}
+#steps-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#steps-container h1 {
+  width: 100%;
+  text-align: center;
+}
+#steps-container #steps-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 10%;
+}
+#steps-container #steps-wrapper .step {
+  text-align: center;
+}
 /*# sourceMappingURL=index.603968dc.css.map */

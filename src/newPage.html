@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="scss/newPage.scss" />
+    <script src="ts/main.ts" type="module"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <!-- <h1>Blogiverse</h1> -->
+      <img src="assets/blogiverse-black.png" alt="" />
+      <ul>
+        <a href=""><li>Om</li></a>
+        <a href=""><li>Skapa</li></a>
+        <a href=""><li>Hej</li></a>
+      </ul>
+      <div id="log-in">
+        <p>Logga in</p>
+      </div>
+    </header>
+    <main>
+      <div id="hero">
+        <div id="border"></div>
+      </div>
+
+      <div id="create-container">
+        <h1>Skapa din egna sida här:</h1>
+
+        <div id="create-options">
+          <form action="myPage.html" id="create-form">
+            <div id="personal-container">
+              <div id="personal">
+                <label for="username">Användarnamn:</label>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  placeholder="Användarnamn"
+                />
+
+                <label for="password">Lösenord:</label>
+                <input
+                  type="text"
+                  id="password"
+                  name="password"
+                  placeholder="Lösenord"
+                />
+
+                <button type="button" id="next-button">Nästa</button>
+              </div>
+            </div>
+            <div id="page-container">
+              <div id="create">
+                <label for="name">Namn på blogg:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Bloggnamn"
+                />
+
+                <label for="color-choose">Primärfärg:</label>
+
+                <div id="color-choose">
+                  <div id="color">
+                    <input
+                      type="radio"
+                      id="blue"
+                      name="color-option"
+                      value="#0d2149"
+                    />
+                    <label for="blue" id="blue-box" class="color-box">
+                      BLÅ
+                    </label>
+                  </div>
+                  <div id="color">
+                    <input
+                      type="radio"
+                      id="green"
+                      name="color-option"
+                      value="#788475"
+                    />
+                    <label for="green" id="green-box" class="color-box"
+                      >GRÖN
+                    </label>
+                  </div>
+                  <div id="color">
+                    <input
+                      type="radio"
+                      id="pink"
+                      name="color-option"
+                      value="#fec0aa"
+                    />
+                    <label for="pink" id="pink-box" class="color-box"
+                      >ROSA
+                    </label>
+                  </div>
+
+                  <div id="color">
+                    <input
+                      type="radio"
+                      id="purple"
+                      name="color-option"
+                      value="#86626E"
+                    />
+                    <label for="purple" id="purple-box" class="color-box"
+                      >LILA
+                    </label>
+                  </div>
+                  <div id="color">
+                    <input
+                      type="radio"
+                      id="burgundy"
+                      name="color-option"
+                      value="#800020"
+                    />
+                    <label for="burgundy" id="burgundy-box" class="color-box"
+                      >VINRÖD
+                    </label>
+                  </div>
+                </div>
+                <label for="background-choose">Bakgrundsbild:</label>
+                <div id="background-choose">
+                  <div id="background">
+                    <input
+                      type="radio"
+                      id="bananas"
+                      name="background-option"
+                      value="blue"
+                    />
+                    <label
+                      for="bananas"
+                      class="background-box"
+                      id="bananas-box"
+                    >
+                    </label>
+                  </div>
+                  <div id="background">
+                    <input
+                      type="radio"
+                      id="flowers"
+                      name="background-option"
+                      value="blue"
+                    />
+                    <label
+                      for="flowers"
+                      class="background-box"
+                      id="flowers-box"
+                    >
+                    </label>
+                  </div>
+                  <div id="background">
+                    <input
+                      type="radio"
+                      id="mountains"
+                      name="background-option"
+                      value="blue"
+                    />
+                    <label
+                      for="mountains"
+                      class="background-box"
+                      id="mountains-box"
+                    >
+                    </label>
+                  </div>
+
+                  <div id="background">
+                    <input
+                      type="radio"
+                      id="vegetables"
+                      name="background-option"
+                      value="blue"
+                    />
+                    <label
+                      for="vegetables"
+                      class="background-box"
+                      id="vegetables-box"
+                    >
+                    </label>
+                  </div>
+                  <div id="background">
+                    <input
+                      type="radio"
+                      id="colors"
+                      name="background-option"
+                      value="blue"
+                    />
+                    <label for="colors" class="background-box" id="colors-box">
+                    </label>
+                  </div>
+                </div>
+                <button id="hej" type="button">Skapa</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
