@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Montserrat:wght@300&family=Spartan:wght@100&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;600&family=Montserrat:wght@300&family=Nothing+You+Could+Do&family=Spartan:wght@100&display=swap";
 body {
   margin: 0;
   position: relative;
@@ -15,6 +15,7 @@ body header {
   align-items: center;
   z-index: 4;
   font-family: "Montserrat", sans-serif;
+  padding-bottom: 10px;
 }
 body header h1 {
   font-family: "Spartan", sans-serif;
@@ -28,6 +29,8 @@ body header ul {
   justify-content: space-evenly;
   width: 30%;
   list-style: none;
+  padding: 0;
+  align-items: center;
 }
 body header ul a {
   text-decoration: none;
@@ -45,80 +48,251 @@ body header #log-in:hover {
   background-color: black;
   color: white;
 }
+header #log-in a {
+  color: #000;
+  text-decoration: none;
+}
+header #log-in a:hover {
+  color: #fff;
+}
 #hero {
   width: 100%;
-  height: 90vh;
-  background-image: url("hero.f4edd759.jpeg");
+  height: 100vh;
+}
+#hero #background-color {
+  width: 100%;
+  height: 30vh;
+  background-image: url("colors.4cf75fd2.jpeg");
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
+}
+#hero #info {
+  position: relative;
+  margin-bottom: 100px;
+}
+#hero #info #image {
+  width: 80%;
+  height: 30vh;
+  background-color: #fec0aa;
+  z-index: 30;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -20vh;
+}
+#hero #info #image img {
+  width: 40%;
+}
+#hero #info #info-text {
+  padding-top: 30px;
+  width: 70%;
+  margin: 0 auto;
+}
+#hero #info #info-text h1 {
+  font-family: "Spartan", sans-serif;
+  font-size: 3rem;
+}
+#hero #info #info-text p {
+  font-size: 1.3rem;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main #login-container {
+  margin-top: 60px;
+  width: 100%;
+  height: 60vh;
+  background-color: #788475;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
   position: relative;
 }
-#hero #text-container {
-  width: 100%;
-  height: 70%;
-  margin: 0 auto;
-  text-align: center;
-  color: #000;
-  font-family: "Josefin Sans", sans-serif;
-  font-size: 1.8rem;
-  line-height: 30px;
+main #login-container #text {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  font-family: "Josefin Sans", sans-serif;
+  color: #fff;
 }
-#hero #text-container p {
-  overflow: hidden;
-  border-right: 0.15em solid green;
-  white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: 0.15em;
-  animation: typing 4.5s steps(40, end), blink-caret 0.75s step-end infinite;
+main #login-container #text #arrow {
+  display: none;
 }
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 50%;
-  }
+main #login-container form {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  color: #fff;
+  height: 55%;
 }
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: green;
-  }
-}
-#hero #border {
+main #login-container form #input-label {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  background-image: url("border.61f042b6.png");
-  position: absolute;
-  background-repeat: repeat-x;
-  height: 10px;
-  background-size: 75px 10px;
-  bottom: 0;
+  gap: 10px;
 }
-#steps-container {
+main #login-container form #input-label label {
+  text-align: center;
+  margin-top: 10px;
+}
+main #login-container form #input-label input {
+  width: 100%;
+  height: 4vh;
+  font-family: "Montserrat", sans-serif;
+}
+main #login-container form button {
+  height: 6vh;
+  width: 80%;
+  margin-top: 10px;
+  background-color: #fec0aa;
+  border: none;
+  font-family: "Josefin Sans", sans-serif;
+  color: #fff;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+main #login-container #wrong {
+  width: 90%;
+  text-align: center;
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  bottom: 10px;
+}
+main #steps-container {
   width: 80%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
+  padding-top: 40px;
 }
-#steps-container h1 {
+main #steps-container h1 {
   width: 100%;
   text-align: center;
+  font-family: "Spartan", sans-serif;
+  text-transform: uppercase;
 }
-#steps-container #steps-wrapper {
+main #steps-container #steps-wrapper {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  gap: 10%;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
 }
-#steps-container #steps-wrapper .step {
+main #steps-container #steps-wrapper .step {
   text-align: center;
+  background-color: #fff;
+  padding: 40px 10px 60px 10px;
+  width: 80%;
+}
+main #steps-container #steps-wrapper .step h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+}
+main #create {
+  width: 100%;
+  height: 40vh;
+  background-color: #86626e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 60px;
+}
+main #create #text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Josefin Sans", sans-serif;
+  color: #fff;
+}
+main #create #text #arrow {
+  display: none;
+}
+main #create a {
+  width: 70%;
+}
+main #create a #create-button {
+  height: 70px;
+  width: 100%;
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: "Spartan", sans-serif;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  #hero #background-color {
+    height: 50vh;
+  }
+  #hero #info #image {
+    width: 25%;
+    height: 60vh;
+    position: absolute;
+    top: -25vh;
+    left: 10%;
+  }
+  #hero #info #image img {
+    width: 60%;
+  }
+  #hero #info #info-text {
+    width: 60%;
+    position: absolute;
+    left: 40%;
+  }
+
+  main #login-container {
+    margin-top: 200px;
+    height: 40vh;
+    flex-direction: row;
+  }
+  main #login-container #text #arrow {
+    font-size: 3rem;
+    display: block;
+  }
+  main #login-container form {
+    flex-direction: row;
+    width: 70%;
+  }
+  main #login-container form #input-label {
+    width: 25%;
+  }
+  main #login-container form button {
+    width: 15%;
+    font-size: 1rem;
+  }
+  main #login-container #wrong {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+  }
+  main #steps-container #steps-wrapper {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  main #steps-container #steps-wrapper .step {
+    width: 28%;
+  }
+  main #create {
+    flex-direction: row;
+  }
+  main #create #text #arrow {
+    font-size: 3rem;
+    display: block;
+  }
+  main #create a {
+    width: 25%;
+  }
 }
 /*# sourceMappingURL=index.603968dc.css.map */

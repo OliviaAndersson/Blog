@@ -5,7 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="scss/myPage.scss" />
+    <script src="ts/myPage.ts" type="module"></script>
+
     <title>Document</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <!-- <h1>Blogiverse</h1> -->
+      <ul>
+        <li id="head"></li>
+        <div id="links">
+          <a href="index.html"><li>Hem</li></a>
+          <a href="createPost.html"><li>Skapa inlägg</li></a>
+        </div>
+        <div id="log-in">
+          <a href="index.html">
+            <p>Logga ut</p>
+          </a>
+        </div>
+      </ul>
+    </header>
+
+    <main>
+      <!-- <div id="hero"><div id="by-pink">by: Olivia Andersson</div></div> -->
+      <div id="hero"></div>
+
+      <div id="content">
+        <div id="left">
+          <div id="posts">
+            <p id="no-posts"></p>
+          </div>
+        </div>
+        <div id="right">
+          <div id="create-container">
+            <!-- <div id="create-post-green">
+              <button>Skapa inlägg</button>
+            </div> -->
+          </div>
+          <div id="latest-posts">
+            <h1>
+              Senaste
+              <svg>
+                <line
+                  x1="0"
+                  y1="0"
+                  x2="300"
+                  y2="0"
+                  stroke="black"
+                  stroke-width="3"
+                />
+              </svg>
+            </h1>
+
+            <ul id="latest"></ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>

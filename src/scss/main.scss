@@ -11,95 +11,272 @@ body {
   @include header;
 }
 
+header {
+  #log-in {
+    a {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+  #log-in a:hover {
+    color: #fff;
+  }
+}
 #hero {
-  width: 100%;
-  height: 90vh;
-  background-image: url("../assets/hero.jpeg");
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  //   display: flex;
-  //   flex-direction: row;
-  //   align-items: center;
-
-  #text-container {
+width: 100%;
+height: 100vh;
+  #background-color {
     width: 100%;
-    height: 70%;
-    margin: 0 auto;
-    text-align: center;
-    color: #000;
-    font-family: $headerfont;
-    font-size: 1.8rem;
-    line-height: 30px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    height: 30vh;
+    background-image: url("../assets/colors.jpeg");
+    background-position: center;
+    background-size: cover;
+  }
 
-    p {
-      //   width: 80%;
-      overflow: hidden;
-      border-right: 0.15em solid green;
-      white-space: nowrap;
+  #info {
+    position: relative;
+    margin-bottom: 100px;
+    #image {
+      width: 80%;
+      height: 30vh;
+      background-color: $pink;
+      z-index: 30;
+     margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: -20vh;
+      img {
+        width: 40%;
+      }
+    }
+    #info-text {
+      padding-top: 30px;
+      width: 70%;
       margin: 0 auto;
-      letter-spacing: 0.15em;
-      animation: typing 4.5s steps(40, end), blink-caret 0.75s step-end infinite;
 
-      @keyframes typing {
-        from {
-          width: 0;
-        }
-        to {
-          width: 50%;
-        }
+      h1 {
+        font-family: $headfont;
+        font-size: 3rem;
       }
 
-      @keyframes blink-caret {
-        from,
-        to {
-          border-color: transparent;
+      p{
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+// #hero {
+//   width: 100%;
+//   height: 90vh;
+//   background-image: url("../assets/hero.jpeg");
+//   //   position: absolute;
+//   //   top: 0;
+//   //   left: 0;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   position: relative;
+//   //   display: flex;
+//   //   flex-direction: row;
+//   //   align-items: center;
+
+//   // #text-container {
+//   //   width: 100%;
+//   //   height: 70%;
+//   //   margin: 0 auto;
+//   //   text-align: center;
+//   //   color: #000;
+//   //   font-family: $headerfont;
+//   //   font-size: 1.8rem;
+//   //   line-height: 30px;
+//   //   display: flex;
+//   //   flex-direction: row;
+//   //   align-items: center;
+//   //   justify-content: center;
+
+//   //   p {
+//   //     //   width: 80%;
+//   //     overflow: hidden;
+//   //     border-right: 0.15em solid green;
+//   //     white-space: nowrap;
+//   //     margin: 0 auto;
+//   //     letter-spacing: 0.15em;
+//   //     animation: typing 4.5s steps(40, end), blink-caret 0.75s step-end infinite;
+
+//   //     @keyframes typing {
+//   //       from {
+//   //         width: 0;
+//   //       }
+//   //       to {
+//   //         width: 50%;
+//   //       }
+//   //     }
+
+//   //     @keyframes blink-caret {
+//   //       from,
+//   //       to {
+//   //         border-color: transparent;
+//   //       }
+//   //       50% {
+//   //         border-color: green;
+//   //       }
+//   //     }
+//   //   }
+//   // }
+//   #border {
+//     width: 100%;
+//     background-image: url("../assets/border.png");
+//     position: absolute;
+//     background-repeat: repeat-x;
+//     height: 10px;
+//     background-size: 75px 10px;
+//     bottom: 0;
+//   }
+// }
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  #login-container {
+    margin-top: 60px;
+    width: 100%;
+    height: 60vh;
+    background-color: $green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+
+    #text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: $headerfont;
+      color: #fff;
+      #arrow {
+        display: none;
+      }
+    }
+
+    form {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 60%;
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      color: #fff;
+      height: 55%;
+      #input-label {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        label {
+          text-align: center;
+          margin-top: 10px;
         }
-        50% {
-          border-color: green;
+        input {
+          width: 100%;
+          height: 4vh;
+          font-family: $breadfont;
+        }
+      }
+      button {
+        height: 6vh;
+        width: 80%;
+        margin-top: 10px;
+        background-color: $pink;
+        border: none;
+        font-family: $headerfont;
+        color: #fff;
+        font-size: 1.5rem;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+    }
+    #wrong {
+      width: 90%;
+      text-align: center;
+      color: #fff;
+      font-family: $headerfont;
+      text-transform: uppercase;
+      bottom: 10px;
+    }
+  }
+  #steps-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 40px;
+
+    h1 {
+      width: 100%;
+      text-align: center;
+      font-family: $headfont;
+      text-transform: uppercase;
+    }
+
+    #steps-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+
+      .step {
+        text-align: center;
+        background-color: #fff;
+        padding: 40px 10px 60px 10px;
+        width: 80%;
+        h2 {
+          font-family: $headerfont;
+          font-size: 3rem;
         }
       }
     }
   }
-  #border {
+
+  #create {
     width: 100%;
-    background-image: url("../assets/border.png");
-    position: absolute;
-    background-repeat: repeat-x;
-    height: 10px;
-    background-size: 75px 10px;
-    bottom: 0;
-  }
-}
-
-#steps-container {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-  h1 {
-    width: 100%;
-    text-align: center;
-  }
-
-  #steps-wrapper {
+    height: 40vh;
+    background-color: $purple;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-evenly;
-    gap: 10%;
+    align-items: center;
+    margin-top: 60px;
+    #text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: $headerfont;
+      color: #fff;
 
-    .step {
-      text-align: center;
+      #arrow {
+        display: none;
+      }
+    }
+    a {
+      width: 70%;
+      #create-button {
+        height: 70px;
+        width: 100%;
+        background-color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-family: $headfont;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
     }
   }
 }
@@ -107,3 +284,95 @@ body {
 // main {
 //   margin-top: 100vh;
 // }
+
+//Pad
+@media screen and (min-width: 768px) {
+  
+}
+
+//Desktop
+@media screen and (min-width: 1024px) {
+  #hero {
+    #background-color {
+      height: 50vh;
+    }
+    #info {
+      #image {
+        width: 25%;
+        height: 60vh;
+        position: absolute;
+        top: -25vh;
+        left: 10%;
+        img {
+          width: 60%;
+        }
+      }
+      #info-text {
+        width: 60%;
+        position: absolute;
+        left: 40%;
+      }
+    }
+  }
+
+  main {
+    #login-container {
+      margin-top: 200px;
+      height: 40vh;
+    flex-direction: row;  
+      #text {
+        #arrow {
+          font-size: 3rem;
+          display: block;
+        }
+      }
+  
+      form {
+        flex-direction: row;
+        width: 70%;
+
+        #input-label {
+          width: 25%;
+        }
+
+        button {
+          width: 15%;
+          font-size: 1rem;
+        }
+      }
+      #wrong {
+        width: 100%;
+        position: absolute;
+        bottom: 20px;
+        
+      }
+    }
+    #steps-container {
+      #steps-wrapper {
+        flex-direction: row;
+        justify-content: space-evenly;
+  
+        .step {
+          width: 28%;
+        }
+      }
+    }
+  
+    #create {
+      flex-direction: row;
+
+      #text {
+
+        #arrow {
+          font-size: 3rem;
+          display: block;
+        }
+      }
+      a {
+        width: 25%;
+
+        
+      }
+    }
+  }
+}

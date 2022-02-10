@@ -9,6 +9,9 @@ body {
   @include header;
 }
 
+header {
+  background-color: $pink;
+}
 main {
   display: flex;
   flex-direction: column;
@@ -37,11 +40,16 @@ main {
 
     h1 {
       text-align: center;
-      font-family: $headfont;
+      font-family: $headerfont;
+    }
+    #p-info {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 50px;
     }
 
     #create-options {
-      width: 50%;
+      width: 80%;
       margin: 0 auto;
 
       #create-form {
@@ -54,15 +62,11 @@ main {
         #personal-container {
           display: block;
           #personal {
-            width: 100%;
-            // background-color: yellowgreen;
             display: flex;
             flex-direction: column;
-            height: 40vh;
-            border-radius: 10px;
-            justify-content: space-evenly;
+            gap: 20px;
             align-items: center;
-            border: 2px solid #788475;
+            margin-bottom: 30px;
 
             #next-button {
               width: 20%;
@@ -73,6 +77,16 @@ main {
               border: none;
               border-radius: 5px;
               color: #fff;
+            }
+
+            #user-wrong,
+            #name-wrong,
+            #password-wrong {
+              padding: 0;
+              margin-top: -10px;
+              color: $burgundy;
+              font-family: $headerfont;
+              font-weight: 600;
             }
           }
         }
@@ -86,23 +100,47 @@ main {
           font-family: $headerfont;
         }
         #page-container {
-          display: block;
+          display: none;
           #create {
             width: 100%;
             display: flex;
             flex-direction: column;
-            height: 100vh;
             border-radius: 10px;
-            justify-content: space-evenly;
             align-items: center;
-            border: 2px solid #788475;
+            // border: 2px solid #788475;
+            gap: 30px;
 
-            #color-choose {
-              display: flex;
+            #webname-wrong,
+            #theme-wrong,
+            #background-wrong,
+            #color-wrong {
+              padding: 0;
+              margin-top: -10px;
+              color: $burgundy;
+              font-family: $headerfont;
+              font-weight: 600;
+            }
+
+            #color-label,
+            #background-label {
+              padding-top: 40px;
+              background-color: #fff;
               width: 100%;
-              flex-direction: row;
-              justify-content: space-evenly;
+              height: 20vh;
+              font-family: $headerfont;
+              font-size: 2rem;
+              font-weight: 600;
+              text-transform: uppercase;
+              margin-top: 30px;
+            }
+            #color-choose,
+            #background-choose {
+              display: flex;
+              width: 80%;
+              flex-direction: row-reverse;
               color: #fff;
+              flex-wrap: wrap;
+              margin-top: -15vh;
 
               input {
                 height: 30px;
@@ -111,95 +149,125 @@ main {
 
               input:checked + label {
                 border: 3px solid black;
-                width: 74px;
-                height: 74px;
               }
 
-              #color {
+              #color,
+              #background {
                 display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                width: 33%;
 
-                .color-box {
-                  width: 80px;
-                  height: 80px;
-                  border-radius: 10px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
+                .color-box,
+                .background-box {
+                  width: 100%;
+                  position: relative;
+                  background-size: cover;
                 }
+                // .color-box {
+                //   width: 80px;
+                //   height: 80px;
+                //   border-radius: 10px;
+                //   display: flex;
+                //   align-items: center;
+                //   justify-content: center;
+                // }
                 #blue-box {
-                  background-color: #0d2149;
+                  background-color: $blue;
+                }
+                #yellow-box {
+                  background-color: $yellow;
                 }
                 #green-box {
-                  background-color: #788475;
+                  background-color: $green;
                 }
                 #pink-box {
-                  background-color: #fec0aa;
+                  background-color: $pink;
                 }
                 #purple-box {
-                  background-color: #86626e;
+                  background-color: $purple;
                 }
 
                 #burgundy-box {
-                  background-color: #800020;
+                  background-color: $burgundy;
                 }
 
                 // .color-box:hover {
                 //   transform: scale(2);
                 // }
               }
+              .color-box::after {
+                content: "";
+                display: block;
+                padding-bottom: 100%;
+              }
+              .background-box::after {
+                content: "";
+                display: block;
+                padding-bottom: 100%;
+              }
             }
 
-            #background-choose {
-              display: flex;
-              width: 100%;
-              flex-direction: row;
-              justify-content: space-evenly;
+            // #background-choose {
+            //   display: flex;
+            //   width: 100%;
+            //   flex-direction: row;
+            //   justify-content: space-evenly;
 
-              input {
-                height: 30px;
-                display: none;
-              }
+            //   input {
+            //     height: 30px;
+            //     display: none;
+            //   }
 
-              input:checked + label {
-                border: 3px solid black;
-                width: 74px;
-                height: 74px;
-              }
+            //   input:checked + label {
+            //     border: 3px solid black;
+            //     width: 74px;
+            //     height: 74px;
+            //   }
 
-              #background {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
+            //   #background {
+            //     display: flex;
+            //     flex-direction: column;
+            //     align-items: center;
+            //     gap: 10px;
 
-                .background-box {
-                  width: 80px;
-                  height: 80px;
-                  border-radius: 10px;
-                  background-size: cover;
-                }
+            //     .background-box {
+            //       width: 80px;
+            //       height: 80px;
+            //       border-radius: 10px;
+            //       background-size: cover;
+            //     }
 
-                #bananas-box {
-                  background-image: url("../assets/bananas.jpeg");
-                }
-                #flowers-box {
-                  background-image: url("../assets/flowers.jpeg");
-                }
-                #mountains-box {
-                  background-image: url("../assets/mountains.jpeg");
-                }
-                #vegetables-box {
-                  background-image: url("../assets/vegetables.jpeg");
-                }
-                #colors-box {
-                  background-image: url("../assets/colors.jpeg");
-                }
-              }
+            #bananas-box {
+              background-image: url("../assets/bananas.jpeg");
+            }
+            #dragon-box {
+              background-image: url("../assets/dragon.jpeg");
+            }
+            #flowers-box {
+              background-image: url("../assets/flowers.jpeg");
+            }
+            #mountains-box {
+              background-image: url("../assets/mountains.jpeg");
+            }
+            #vegetables-box {
+              background-image: url("../assets/vegetables.jpeg");
+            }
+            #colors-box {
+              background-image: url("../assets/colors.jpeg");
             }
           }
+        }
+        #submit-button {
+          width: 20%;
+          height: 40px;
+          background-color: #8c4843;
+          font-family: $headerfont;
+          text-transform: uppercase;
+          border: none;
+          border-radius: 5px;
+          color: #fff;
         }
       }
     }

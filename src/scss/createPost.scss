@@ -1,0 +1,169 @@
+@import "styles";
+@import "mixins";
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: $bgcolor;
+  font-family: $breadfont;
+  @include header;
+}
+
+header {
+  align-items: center;
+  ul {
+    width: 100% !important;
+
+    #head {
+      font-family: $cursivefont;
+      font-size: 2.5rem;
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  #hero {
+    width: 100%;
+    height: 50vh;
+    background-image: url("../assets/bananas.jpeg");
+    background-position: top;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      padding: 30px;
+      color: #fff;
+      font-family: $headfont;
+    }
+
+    #pink {
+      background-color: $pink;
+    }
+
+    #purple {
+      background-color: $purple;
+    }
+
+    #green {
+      background-color: $green;
+    }
+
+    #blue {
+      background-color: $blue;
+    }
+
+    #burgundy {
+      background-color: $burgundy;
+    }
+
+    #border {
+      width: 100%;
+      background-image: url("../assets/border.png");
+      position: absolute;
+      background-repeat: repeat-x;
+      height: 10px;
+      background-size: 75px 10px;
+      bottom: 0;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    gap: 30px;
+
+    input {
+      font-family: $breadfont;
+      height: 30px;
+      width: 50%;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+
+    label {
+      text-align: center;
+      font-family: $headerfont;
+      font-size: 2rem;
+      margin-top: 60px;
+    }
+
+    #text {
+      display: block;
+    }
+
+    #buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      width: 60%;
+      margin: 0 auto;
+
+      button {
+        width: 28%;
+        height: 50px;
+        box-shadow: none;
+        border: none;
+        color: honeydew;
+        font-family: $headfont;
+        cursor: pointer;
+      }
+
+      #yes {
+        background-color: $purple;
+        display: block;
+      }
+
+      #no {
+        background-color: $burgundy;
+        display: block;
+      }
+      #submit {
+        background-color: $green;
+      }
+
+      #reset {
+        background-color: $blue;
+      }
+
+      #abort {
+        background-color: grey;
+      }
+    }
+
+    #picture-container {
+      padding: 10px;
+      border: 2px solid black;
+      width: 50%;
+      margin: 30px auto;
+      display: none;
+
+      label {
+        display: block;
+        text-align: center;
+        margin: 0 0 10px 0;
+      }
+      input {
+        width: 95%;
+        margin: 0 auto;
+      }
+    }
+
+    textarea {
+      font-family: $breadfont;
+      font-size: 1rem;
+    }
+  }
+
+  #content {
+    height: 30vh;
+  }
+}

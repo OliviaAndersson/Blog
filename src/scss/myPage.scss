@@ -1,0 +1,641 @@
+@import "styles";
+@import "mixins";
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: $bgcolor;
+  font-family: $breadfont;
+  @include header;
+}
+
+header {
+  align-items: center;
+  height: 12vh !important;
+  padding-bottom: 0 !important;
+  background-color: aqua !important;
+  ul {
+    width: 100% !important;
+
+    #head {
+      font-family: $headerfont;
+      font-weight: 600;
+      font-size: 2.5rem;
+    }
+
+    #links{
+      display: flex;
+      flex-direction: row;
+      width: 30%;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  #hero {
+    width: 100% !important;
+    height: 10vh !important;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    #by-pink,
+    #by-purple,
+    #by-blue,
+    #by-green,
+    #by-burgundy {
+      height: 20px;
+      width: 80% !important;
+      position: absolute;
+      margin: 0 auto;
+      bottom: -40px;
+      left: 10% !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-transform: uppercase;
+    }
+
+    #by-pink {
+      background-color: $pink;
+    }
+
+    #by-purple {
+      background-color: $purple;
+    }
+
+    #by-green {
+      background-color: $pink;
+    }
+
+    #by-blue {
+      background-color: $blue;
+    }
+
+    #by-burgundy {
+      background-color: $burgundy;
+    }
+    #by-yellow {
+      background-color: $yellow;
+    }
+  }
+
+  #content {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    #left {
+      width: 70%;
+      margin: 0 auto;
+      margin-top: 40px;
+
+      #posts {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+
+        .new-post {
+          width: 65%;
+          margin: 0 auto;
+
+          h1 {
+            font-family: $headfont;
+          }
+          h1,
+          h2 {
+            text-align: center;
+          }
+
+          h2 {
+            font-size: 1.2rem;
+            font-family: $headerfont;
+            font-weight: 600;
+          }
+
+          #pink {
+            color: $pink;
+          }
+
+          #purple {
+            color: $purple;
+          }
+
+          #green {
+            color: $green;
+          }
+
+          #blue {
+            color: $blue;
+          }
+
+          #burgundy {
+            color: $burgundy;
+          }
+
+          img {
+            height: 50vh;
+            width: auto;
+            margin: 0 auto;
+            display: flex;
+          }
+
+          p {
+            line-height: 30px;
+          }
+        }
+      }
+    }
+
+    #right {
+      display: none;
+      width: 22%;
+      margin: 0 auto;
+      position: sticky;
+      top: 30px;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      #create-post-purple,
+      #create-post-yellow,
+      #create-post-blue,
+      #create-post-green,
+      #create-post-pink,
+      #create-post-burgundy {
+        height: 30vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+
+        button {
+          padding: 20px;
+          //   border-radius: 5px;
+          background-color: $bgcolor;
+          box-shadow: none;
+          font-family: $breadfont;
+          font-size: 2rem;
+          color: #000;
+          border-radius: 20px;
+          border: none;
+          background-color: $bgcolor;
+          color: #fff;
+        }
+
+        button:hover {
+          cursor: pointer;
+          transform: scale(1.2);
+        }
+      }
+
+      #create-post-purple {
+        background-color: $purple;
+
+        button {
+          color: $purple;
+        }
+      }
+
+      #create-post-yellow {
+        background-color: $yellow;
+
+        button {
+          color: $yellow;
+        }
+      }
+
+      #create-post-blue {
+        background-color: $blue;
+        button {
+          color: $blue;
+        }
+      }
+      #create-post-green {
+        // background-color: $green;
+        button {
+          background-color: $green;
+        }
+      }
+
+      #create-post-pink {
+        background-color: $pink;
+        button {
+          color: $pink;
+        }
+      }
+
+      #create-post-burgundy {
+        background-color: $burgundy;
+
+        button {
+          color: $burgundy;
+        }
+      }
+
+      #latest-posts {
+        display: flex;
+        flex-direction: column;
+
+        h1 {
+          font-family: $headfont;
+          text-transform: uppercase;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          height: 40px;
+          align-items: center;
+          margin: 0;
+
+          svg {
+            height: 4px;
+            margin-top: -4px;
+            margin-left: 10px;
+          }
+        }
+
+        ul {
+          list-style: none;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          padding-left: 10px;
+          margin: 0;
+
+          a {
+            color: black;
+            text-decoration: none;
+            display: inline-flex;
+            flex-direction: column;
+            padding: 10px;
+
+            gap: 5px;
+
+            h3,
+            h5 {
+              margin: 0;
+              padding: 0;
+            }
+
+            h5 {
+              color: darkgray;
+            }
+
+            p {
+              padding: 5px;
+              display: inline;
+              margin: 0;
+              width: 100%;
+              text-align: center;
+              color: #fff;
+            }
+
+            #green {
+              background-color: $green;
+            }
+
+            #blue {
+              background-color: $blue;
+            }
+
+            #pink {
+              background-color: $pink;
+            }
+
+            #purple {
+              background-color: $purple;
+            }
+
+            #burgundy {
+              background-color: $burgundy;
+            }
+            #yellow {
+              background-color: $yellow;
+            }
+          }
+
+          a:hover {
+            border: 1px solid black;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px){
+  
+}
+
+// @media screen and (min-width: 1024px){
+  
+// main {
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 40px;
+
+//   #hero {
+//     width: 100% !important;
+//     height: 50vh;
+//     background-position: center;
+//     background-size: cover;
+//     position: relative;
+
+//     #by-pink,
+//     #by-purple,
+//     #by-blue,
+//     #by-green,
+//     #by-burgundy {
+//       height: 80px;
+//       width: 20%;
+//       position: absolute;
+//       margin: 0 auto;
+//       bottom: -40px;
+//       left: 40%;
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       color: #fff;
+//       text-transform: uppercase;
+//     }
+
+//     #by-pink {
+//       background-color: $pink;
+//     }
+
+//     #by-purple {
+//       background-color: $purple;
+//     }
+
+//     #by-green {
+//       background-color: $green;
+//     }
+
+//     #by-blue {
+//       background-color: $blue;
+//     }
+
+//     #by-burgundy {
+//       background-color: $burgundy;
+//     }
+//     #by-yellow {
+//       background-color: $yellow;
+//     }
+//   }
+//   #content {
+//     display: flex;
+//     flex-direction: row;
+//     position: relative;
+
+//     #left {
+//       width: 70%;
+//       margin: 0 auto;
+//       margin-top: 40px;
+
+//       #posts {
+//         display: flex;
+//         flex-direction: column;
+//         gap: 50px;
+//         align-items: center;
+
+//         .new-post {
+//           width: 65%;
+//           margin: 0 auto;
+
+//           h1 {
+//             font-family: $headfont;
+//           }
+//           h1,
+//           h2 {
+//             text-align: center;
+//           }
+
+//           h2 {
+//             font-size: 1.2rem;
+//             font-family: $headerfont;
+//             font-weight: 600;
+//           }
+
+//           #pink {
+//             color: $pink;
+//           }
+
+//           #purple {
+//             color: $purple;
+//           }
+
+//           #green {
+//             color: $green;
+//           }
+
+//           #blue {
+//             color: $blue;
+//           }
+
+//           #burgundy {
+//             color: $burgundy;
+//           }
+
+//           img {
+//             height: 50vh;
+//             width: auto;
+//             margin: 0 auto;
+//             display: flex;
+//           }
+
+//           p {
+//             line-height: 30px;
+//           }
+//         }
+//       }
+//     }
+
+//     #right {
+//       width: 22%;
+//       margin: 0 auto;
+//       position: sticky;
+//       top: 30px;
+//       height: 100vh;
+//       display: flex;
+//       flex-direction: column;
+//       gap: 40px;
+
+//       #create-post-purple,
+//       #create-post-yellow,
+//       #create-post-blue,
+//       #create-post-green,
+//       #create-post-pink,
+//       #create-post-burgundy {
+//         height: 30vh;
+//         width: 100%;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//         border-radius: 5px;
+
+//         button {
+//           padding: 20px;
+//           //   border-radius: 5px;
+//           background-color: $bgcolor;
+//           box-shadow: none;
+//           font-family: $breadfont;
+//           font-size: 2rem;
+//           color: #000;
+//           border-radius: 20px;
+//           border: none;
+//           background-color: $bgcolor;
+//           color: #fff;
+//         }
+
+//         button:hover {
+//           cursor: pointer;
+//           transform: scale(1.2);
+//         }
+//       }
+
+//       #create-post-purple {
+//         background-color: $purple;
+
+//         button {
+//           color: $purple;
+//         }
+//       }
+
+//       #create-post-yellow {
+//         background-color: $yellow;
+
+//         button {
+//           color: $yellow;
+//         }
+//       }
+
+//       #create-post-blue {
+//         background-color: $blue;
+//         button {
+//           color: $blue;
+//         }
+//       }
+//       #create-post-green {
+//         // background-color: $green;
+//         button {
+//           background-color: $green;
+//         }
+//       }
+
+//       #create-post-pink {
+//         background-color: $pink;
+//         button {
+//           color: $pink;
+//         }
+//       }
+
+//       #create-post-burgundy {
+//         background-color: $burgundy;
+
+//         button {
+//           color: $burgundy;
+//         }
+//       }
+
+//       #latest-posts {
+//         display: flex;
+//         flex-direction: column;
+
+//         h1 {
+//           font-family: $headfont;
+//           text-transform: uppercase;
+//           display: flex;
+//           flex-direction: row;
+//           justify-content: center;
+//           height: 40px;
+//           align-items: center;
+//           margin: 0;
+
+//           svg {
+//             height: 4px;
+//             margin-top: -4px;
+//             margin-left: 10px;
+//           }
+//         }
+
+//         ul {
+//           list-style: none;
+//           display: flex;
+//           flex-direction: column;
+//           gap: 10px;
+//           padding-left: 10px;
+//           margin: 0;
+
+//           a {
+//             color: black;
+//             text-decoration: none;
+//             display: inline-flex;
+//             flex-direction: column;
+//             padding: 10px;
+
+//             gap: 5px;
+
+//             h3,
+//             h5 {
+//               margin: 0;
+//               padding: 0;
+//             }
+
+//             h5 {
+//               color: darkgray;
+//             }
+
+//             p {
+//               padding: 5px;
+//               display: inline;
+//               margin: 0;
+//               width: 100%;
+//               text-align: center;
+//               color: #fff;
+//             }
+
+//             #green {
+//               background-color: $green;
+//             }
+
+//             #blue {
+//               background-color: $blue;
+//             }
+
+//             #pink {
+//               background-color: $pink;
+//             }
+
+//             #purple {
+//               background-color: $purple;
+//             }
+
+//             #burgundy {
+//               background-color: $burgundy;
+//             }
+//             #yellow {
+//               background-color: $yellow;
+//             }
+//           }
+
+//           a:hover {
+//             border: 1px solid black;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// }

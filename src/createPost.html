@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="scss/createPost.scss" />
+    <script src="ts/createPost.ts" type="module"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <!-- <h1>Blogiverse</h1> -->
+      <ul>
+        <a href=""><li>Om</li></a>
+        <a href=""><li>Skapa</li></a>
+        <li id="head">Fruktiverse</li>
+        <a href=""><li>Om</li></a>
+        <a href=""><li>Skapa</li></a>
+      </ul>
+    </header>
+    <main>
+      <div id="hero">
+        <h1 id="blue">Skapa ett inlägg!</h1>
+        <div id="border"></div>
+      </div>
+
+      <div id="create">
+        <form action="myPage.html">
+          <label for="header">Rubrik</label>
+          <input type="text" id="header" name="header" placeholder="Rubrik" />
+
+          <label for="buttons" id="text"
+            >Vill du lägga upp en bild i ditt inlägg?</label
+          >
+          <div id="buttons">
+            <button type="button" id="yes">SJÄLVKLART!</button>
+            <button type="button" id="no">NEJ</button>
+          </div>
+
+          <div id="picture-container">
+            <label for="picture">Ladda upp bilden här:</label>
+            <input
+              type="url"
+              id="picture"
+              name="picture"
+              placeholder="https//..."
+            />
+          </div>
+
+          <label for="content">Brödtext</label>
+          <textarea
+            name="content"
+            id="content"
+            cols="30"
+            rows="10"
+            placeholder="Här skriver du ditt inlägg..."
+          ></textarea>
+          <div id="buttons">
+            <button type="button" onclick="alert('Är du säker?')" id="submit">
+              POSTA!
+            </button>
+            <button type="reset" id="reset">BÖRJA OM</button>
+
+            <button type="button" id="abort">AVBRYT</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

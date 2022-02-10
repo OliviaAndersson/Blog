@@ -5,46 +5,108 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="scss/main.scss" />
-    <!-- <script src="ts/main.ts"></script> -->
+    <script src="ts/main.ts" type="module"></script>
     <title>Blogiverse</title>
   </head>
   <body>
     <div id="hero">
       <header>
-        <!-- <h1>Blogiverse</h1> -->
         <img src="assets/blogiverse-black.png" alt="" />
         <ul>
           <a href=""><li>Om</li></a>
           <a href=""><li>Skapa</li></a>
           <a href=""><li>Hej</li></a>
         </ul>
+
         <div id="log-in">
-          <p>Logga in</p>
+          <a href="#login-container">
+            <p>Logga in</p>
+          </a>
+        </div>
+        <div id="log-in">
+          <a href="#create-container">
+            <p>Skapa</p>
+          </a>
         </div>
       </header>
-      <div id="text-container">
-        <p>Välkommen till världens största bloggportal!</p>
+      <div id="background-color"></div>
+      <div id="info">
+        <div id="image">
+          <img src="assets/blogiverse-black.png" alt="" />
+        </div>
+        <div id="info-text">
+          <h1>Välkommen till världens största bloggportal!</h1>
+          <p>
+            Här kan du enkelt skapa din egen blogg eller uppdatera din redan
+            skapade
+          </p>
+        </div>
       </div>
-      <div id="border"></div>
+      <!-- <div id="text-container">
+        <p>Välkommen till världens sstörsta bloggportal!</p>
+      </div> -->
+      <!-- <div id="border"></div> -->
     </div>
 
     <main>
+      <div id="login-container">
+        <div id="text">
+          <h1>Logga in här</h1>
+
+          <!-- <div id="arrow">&#9758;</div> -->
+          <div id="arrow">&rdca;</div>
+        </div>
+        <form action="myPage.html">
+          <div id="input-label">
+            <label for="username">ANVÄNDARNAMN</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Användarnamn"
+            />
+          </div>
+
+          <div id="input-label">
+            <label for="password">LÖSENORD</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Lösenord"
+            />
+          </div>
+          <button type="button" id="log-in-button">Logga in</button>
+        </form>
+        <p id="wrong"> </p>
+      </div>
       <div id="steps-container">
-        <h1>Det är enkelt att skapa din egna blogg!</h1>
+        <h1>Det är enkelt att skapa din (egen) egna blogg!</h1>
         <div id="steps-wrapper">
           <div class="step">
             <h2>1</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Klicka på skapa konto nedan.</p>
           </div>
           <div class="step">
             <h2>2</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Följ stegen och fyll i alla fält efter dina preferenser.</p>
           </div>
           <div class="step">
             <h2>3</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Skapa sedan enkelt inlägg och ladda upp dem på din sida.</p>
           </div>
         </div>
+      </div>
+      <div id="create">
+        <div id="text">
+          <h1>Skapa konto här</h1>
+
+          <!-- <div id="arrow">&#9758;</div> -->
+          <div id="arrow">&rdca;</div>
+        </div>
+        <a href="newPage.html">
+          <button type="button" id="create-button">Skapa konto</button></a
+        >
       </div>
     </main>
     <footer></footer>

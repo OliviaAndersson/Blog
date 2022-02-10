@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="scss/newPage.scss" />
-    <script src="ts/main.ts" type="module"></script>
+    <script src="ts/newPage.ts" type="module"></script>
     <title>Document</title>
   </head>
   <body>
@@ -13,13 +13,10 @@
       <!-- <h1>Blogiverse</h1> -->
       <img src="assets/blogiverse-black.png" alt="" />
       <ul>
-        <a href=""><li>Om</li></a>
+        <a href="index.html"><li>Hem</li></a>
         <a href=""><li>Skapa</li></a>
         <a href=""><li>Hej</li></a>
       </ul>
-      <div id="log-in">
-        <p>Logga in</p>
-      </div>
     </header>
     <main>
       <div id="hero">
@@ -27,19 +24,34 @@
       </div>
 
       <div id="create-container">
-        <h1>Skapa din egna sida här:</h1>
+        <h1>Skapa din egna blogg här</h1>
+        <p id="p-info">
+          Vi börjar med lite fakta om dig, sen får du gör alla designval!
+        </p>
 
         <div id="create-options">
-          <form action="myPage.html" id="create-form">
+          <form id="create-form">
             <div id="personal-container">
               <div id="personal">
+                <label for="name">Namn:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Namn"
+                  required
+                />
+                <p id="name-wrong"></p>
+
                 <label for="username">Användarnamn:</label>
                 <input
                   type="text"
                   id="username"
                   name="username"
                   placeholder="Användarnamn"
+                  required
                 />
+                <p id="user-wrong"></p>
 
                 <label for="password">Lösenord:</label>
                 <input
@@ -47,22 +59,34 @@
                   id="password"
                   name="password"
                   placeholder="Lösenord"
+                  required
                 />
+                <p id="password-wrong"></p>
 
                 <button type="button" id="next-button">Nästa</button>
               </div>
             </div>
             <div id="page-container">
               <div id="create">
-                <label for="name">Namn på blogg:</label>
+                <label for="webname">Namn på blogg:</label>
                 <input
                   type="text"
-                  id="name"
-                  name="name"
+                  id="webname"
+                  name="webname"
                   placeholder="Bloggnamn"
                 />
+                <p id="webname-wrong"></p>
 
-                <label for="color-choose">Primärfärg:</label>
+                <label for="theme">Vad kommer din blogg handla om:</label>
+                <input
+                  type="text"
+                  id="theme"
+                  name="theme"
+                  placeholder="Område"
+                />
+                <p id="theme-wrong"></p>
+
+                <label for="color-choose" id="color-label">Primärfärg:</label>
 
                 <div id="color-choose">
                   <div id="color">
@@ -72,8 +96,16 @@
                       name="color-option"
                       value="#0d2149"
                     />
-                    <label for="blue" id="blue-box" class="color-box">
-                      BLÅ
+                    <label for="blue" id="blue-box" class="color-box"> </label>
+                  </div>
+                  <div id="color">
+                    <input
+                      type="radio"
+                      id="yellow"
+                      name="color-option"
+                      value="#f6bd60"
+                    />
+                    <label for="yellow" id="yellow-box" class="color-box">
                     </label>
                   </div>
                   <div id="color">
@@ -83,8 +115,7 @@
                       name="color-option"
                       value="#788475"
                     />
-                    <label for="green" id="green-box" class="color-box"
-                      >GRÖN
+                    <label for="green" id="green-box" class="color-box">
                     </label>
                   </div>
                   <div id="color">
@@ -94,9 +125,7 @@
                       name="color-option"
                       value="#fec0aa"
                     />
-                    <label for="pink" id="pink-box" class="color-box"
-                      >ROSA
-                    </label>
+                    <label for="pink" id="pink-box" class="color-box"> </label>
                   </div>
 
                   <div id="color">
@@ -106,8 +135,7 @@
                       name="color-option"
                       value="#86626E"
                     />
-                    <label for="purple" id="purple-box" class="color-box"
-                      >LILA
+                    <label for="purple" id="purple-box" class="color-box">
                     </label>
                   </div>
                   <div id="color">
@@ -117,19 +145,22 @@
                       name="color-option"
                       value="#800020"
                     />
-                    <label for="burgundy" id="burgundy-box" class="color-box"
-                      >VINRÖD
+                    <label for="burgundy" id="burgundy-box" class="color-box">
                     </label>
                   </div>
                 </div>
-                <label for="background-choose">Bakgrundsbild:</label>
+                <p id="color-wrong"></p>
+
+                <label for="background-choose" id="background-label"
+                  >Bakgrundsbild:</label
+                >
                 <div id="background-choose">
                   <div id="background">
                     <input
                       type="radio"
                       id="bananas"
                       name="background-option"
-                      value="blue"
+                      value="https://i.ibb.co/R7vZhhZ/bananas.jpg"
                     />
                     <label
                       for="bananas"
@@ -141,9 +172,20 @@
                   <div id="background">
                     <input
                       type="radio"
+                      id="dragon"
+                      name="background-option"
+                      value="https://i.ibb.co/fGrmHh7/dragon.jpg
+                      "
+                    />
+                    <label for="dragon" class="background-box" id="dragon-box">
+                    </label>
+                  </div>
+                  <div id="background">
+                    <input
+                      type="radio"
                       id="flowers"
                       name="background-option"
-                      value="blue"
+                      value="https://i.ibb.co/mqHKdRc/flowers.jpg"
                     />
                     <label
                       for="flowers"
@@ -157,7 +199,7 @@
                       type="radio"
                       id="mountains"
                       name="background-option"
-                      value="blue"
+                      value="https://i.ibb.co/Cs0L50x/mountains.jpg"
                     />
                     <label
                       for="mountains"
@@ -172,7 +214,7 @@
                       type="radio"
                       id="vegetables"
                       name="background-option"
-                      value="blue"
+                      value="https://i.ibb.co/c6FfTv4/vegetables.jpg"
                     />
                     <label
                       for="vegetables"
@@ -186,13 +228,15 @@
                       type="radio"
                       id="colors"
                       name="background-option"
-                      value="blue"
+                      value="https://i.ibb.co/b6rjBMp/colors.jpg"
                     />
                     <label for="colors" class="background-box" id="colors-box">
                     </label>
                   </div>
                 </div>
-                <button id="hej" type="button">Skapa</button>
+                <p id="background-wrong"></p>
+
+                <button id="submit-button" type="button">Skapa</button>
               </div>
             </div>
           </form>
